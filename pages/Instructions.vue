@@ -21,25 +21,25 @@
   <div class="container">
     <Hooper>
       <Slide class="slide">
-        <div class="w-11/12 md:w-6/12">
-          <p class="text-7xl font-thin mb-20 tracking-wide leading-none">
+        <div class="w-10/12 md:w-6/12">
+          <p class="text-5xl font-thin mb-20 tracking-wide leading-none md:text-6xl">
             {{ $t('Wellcome') }}
           </p>
-          <p class="text-5xl font-thin mb-20 tracking-wide leading-snug">
+          <p class="text-3xl font-thin mb-20 tracking-wide leading-snug md:text-4xl">
             {{ $t('First') }}
           </p>
         </div>
       </Slide>
       <Slide class="slide">
-        <div class="w-11/12 md:w-6/12">
-          <p class="text-5xl font-thin mb-20 tracking-wide leading-snug">
+        <div class="w-10/12 md:w-6/12">
+          <p class="text-3xl font-thin mb-20 tracking-wide leading-snug md:text-4xl">
             {{ $t('Second') }}
           </p>
         </div>
       </Slide>
       <Slide class="slide"
-        ><div class="w-11/12 md:w-6/12">
-          <p class="text-5xl font-thin mb-20 tracking-wide leading-snug">
+        ><div class="w-10/12 md:w-6/12">
+          <p class="text-3xl font-thin mb-20 tracking-wide leading-snug md:text-4xl">
             {{ $t('Last') }}
           </p>
           <nuxt-link to="/first">
