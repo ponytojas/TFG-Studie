@@ -105,6 +105,7 @@
 
 <script>
 export default {
+  transition: "home",
   data() {
     return {
       option: false,
@@ -123,7 +124,7 @@ export default {
         "question": 'first',
         "response": selected,
       })
-      this.$router.push('/')
+      this.$router.push('/second')
     },
   },
 }
