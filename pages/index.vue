@@ -66,6 +66,7 @@
 
 <script>
 export default {
+  transition: 'home',
   data() {
     return {
       lang: this.$store.state.lang,
@@ -87,3 +88,18 @@ export default {
   },
 }
 </script>
+
+<style>
+.home-enter-active {
+  transition: all 0.5s ease;
+}
+.home-leave-active {
+  transform: translateX(-10px);
+  opacity: 0;
+}
+.home-enter, .home-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
+</style>

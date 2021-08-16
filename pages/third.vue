@@ -6,15 +6,16 @@
     "OptionA": "Option A",
     "OptionB": "Option B",
     "Button": "Next",
-    "TextOk": "Add to cart",
-    "TextBad": "I want it"
+    "TextOk": "Delete user",
+    "TextBad": "Cancel"
   },
   "es": {
     "Select": "Selecciona una opción",
     "OptionA": "Opción A",
     "OptionB": "Opción B",
     "Button": "Siguiente",
-    "TextOk": "Añadir al carrito"
+    "TextOk": "Borrar usuario",
+    "TextBad": "Cancelar"
   }
 }
 </i18n>
@@ -22,20 +23,36 @@
 
 <template>
   <div class="flex flex-col justify-around min-h-screen">
-    <div class="flex flex-row justify-around mt-10">
+    <div class="flex flex-row w-full flex-wrap h-auto justify-around mt-10">
       <div class="flex flex-col">
-        <span class="text-4xl">{{ $t('OptionA') }}</span>
-        <button
-          class="mt-4 px-4 py-2 bg-gray-600 rounded-full shadow-lg text-white"
-        >
-          {{ $t('TextOk') }}
-        </button>
+        <span class="mx-auto text-4xl">{{ $t('OptionA') }}</span>
+        <div class="flex flex-row justify-evenly">
+          <button
+            class="mt-4 px-4 py-2 bg-green-600 rounded-full shadow-lg text-white mr-4"
+          >
+            {{ $t('TextOk') }}
+          </button>
+          <button
+            class="mt-4 px-4 py-2 bg-red-600 rounded-full shadow-lg text-white"
+          >
+            {{ $t('TextBad') }}
+          </button>
+        </div>
       </div>
-      <div class="flex flex-col">
-        <span class="text-4xl">{{ $t('OptionB') }}</span>
-        <button class="mt-4 px-4 py-2 bg-gray-600 9shadow-lg text-white">
-          {{ $t('TextOk') }}
-        </button>
+      <div class="flex flex-col mt-20 md:mt-0">
+        <span class="text-4xl mx-auto">{{ $t('OptionB') }}</span>
+        <div class="flex flex-row justify-evenly">
+          <button
+            class="mt-4 px-4 py-2 bg-red-600 rounded-full shadow-lg text-white mr-4"
+          >
+            {{ $t('TextOk') }}
+          </button>
+          <button
+            class="mt-4 px-4 py-2 bg-green-600 rounded-full shadow-lg text-white"
+          >
+            {{ $t('TextBad') }}
+          </button>
+        </div>
       </div>
     </div>
     <div class="flex flex-row">
@@ -105,7 +122,7 @@
 
 <script>
 export default {
-  transition: "home",
+  transition: 'home',
   data() {
     return {
       option: false,
@@ -120,11 +137,11 @@ export default {
       //send with axios the option selected
       let selected = this.option ? 'B' : 'A'
       this.$axios.post('/saveData', {
-        "id": this.$store.state.uuid,
-        "question": 'first',
-        "response": selected,
+        id: this.$store.state.uuid,
+        question: 'third',
+        response: selected,
       })
-      this.$router.push('/second')
+      this.$router.push('/fourth')
     },
   },
 }
