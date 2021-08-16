@@ -40,7 +40,8 @@
             mx-auto
             h-auto
             md:h-56
-            border border-black
+            border
+            rounded-lg
             flex flex-col
             md:flex-row
             card
@@ -58,7 +59,7 @@
             "
           >
             <nuxt-img
-              class="h-full w-full border-r border-black"
+              class="h-full rounded-lg md:rounded-r-none w-full"
               src="/images/flat.jpeg"
             />
           </div>
@@ -86,9 +87,7 @@
                     <div class="flex flex-row h-11/12 w-full">
                       <div class="pt-3 pl-3">
                         <p class="text-base">
-                          <span class="text-lg font-bold">{{
-                            $t('Price')
-                          }}</span>
+                          <span class="text-lg">{{ $t('Price') }}</span>
                         </p>
                       </div>
                     </div>
@@ -105,7 +104,7 @@
                         py-2
                         mx-auto
                         my-auto
-                        bg-black
+                        bg-purple-600
                         w-8/12
                         sm:w-4/12
                         md:w-6/12
@@ -113,12 +112,10 @@
                         cursor-pointer
                         text-white
                         rounded
-                        hover:text-yellow-300
+                        hover:bg-purple-800
                       "
                     >
-                      <p class="text-center w-full">
-                        {{ $t('ContactButton') }}
-                      </p>
+                      <p class="text-center w-full">{{ $t('ContactButton') }}</p>
                     </div>
                   </div>
                 </div>
@@ -129,7 +126,7 @@
       </div>
       <div class="flex flex-col mt-20 md:mt-0">
         <span class="text-4xl mx-auto">{{ $t('OptionB') }}</span>
-        <div
+<div
           class="
             mt-4
             mb-4
@@ -183,9 +180,7 @@
                     <div class="flex flex-row h-11/12 w-full">
                       <div class="pt-3 pl-3">
                         <p class="text-base">
-                          <span class="text-lg font-bold">{{
-                            $t('Price')
-                          }}</span>
+                          <span class="text-lg font-bold">{{ $t('Price') }}</span>
                         </p>
                       </div>
                     </div>
@@ -213,9 +208,7 @@
                         hover:bg-purple-800
                       "
                     >
-                      <p class="text-center w-full">
-                        {{ $t('ContactButton') }}
-                      </p>
+                      <p class="text-center w-full">{{ $t('ContactButton') }}</p>
                     </div>
                   </div>
                 </div>
@@ -308,10 +301,10 @@ export default {
       let selected = this.option ? 'B' : 'A'
       this.$axios.post('/saveData', {
         id: this.$store.state.uuid,
-        question: 'second',
+        question: 'fourth',
         response: selected,
       })
-      this.$router.push('/third')
+      this.$router.push('/fifth')
     },
   },
 }
@@ -342,7 +335,6 @@ input:checked ~ .toggle__line {
 }
 
 .card {
-  box-sizing: border-box;
   background-color: #fff;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
