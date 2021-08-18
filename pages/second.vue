@@ -57,7 +57,7 @@
               bg-gray-300
             "
           >
-            <nuxt-img
+            <img
               class="h-full w-full border-r border-black"
               src="/images/flat.jpeg"
             />
@@ -112,7 +112,6 @@
                         lg:w-10/12
                         cursor-pointer
                         text-white
-                        rounded
                         hover:text-yellow-300
                       "
                     >
@@ -154,7 +153,7 @@
               bg-gray-300
             "
           >
-            <nuxt-img
+            <img
               class="h-full rounded-lg md:rounded-r-none w-full"
               src="/images/flat.jpeg"
             />
