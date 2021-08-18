@@ -58,7 +58,7 @@
               bg-gray-300
             "
           >
-            <nuxt-img
+            <img
               class="h-full rounded-lg md:rounded-r-none w-full"
               src="/images/flat.jpeg"
             />
@@ -151,7 +151,7 @@
               bg-gray-300
             "
           >
-            <nuxt-img
+            <img
               class="h-full rounded-lg md:rounded-r-none w-full"
               src="/images/flat.jpeg"
             />

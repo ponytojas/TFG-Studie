@@ -225,7 +225,7 @@ export default {
         question: 'fifth',
         response: selected,
       })
-      this.$router.push('/sixth')
+      this.$router.push('/finish')
     },
   },
 }
