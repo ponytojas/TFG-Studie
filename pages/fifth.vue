@@ -123,15 +123,15 @@
                   my-auto
                 "
               >
-                <p class="font-semibold cursor-pointer">Localización</p>
+                <p class="font-semibold cursor-pointer">{{ $t('Location') }}</p>
                 <p class="font-semibold text-yellow-500 cursor-pointer">
-                  Contacto
+                  {{ $t('Contact') }}
                 </p>
                 <p class="hidden md:block font-semibold cursor-pointer">
-                  Proyectos
+                   {{ $t('Projects') }}
                 </p>
                 <p class="hidden md:block font-semibold cursor-pointer">
-                  Precio
+                  {{ $t('Price') }}
                 </p>
               </div>
             </div>
